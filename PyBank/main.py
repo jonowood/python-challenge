@@ -66,3 +66,10 @@ print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 # export to text file
 
 export_path = os.path.join('Output', 'budget_data_analysis.txt')
+# print("Financial Analysis")
+# print("----------------------------")
+# print(f"Total Months: {month_total}")
+# print(f"Total: ${total_profits}")
+# print(f"Average Change: ${rounded_average}")
+# print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
+# print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
