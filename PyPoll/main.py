@@ -8,9 +8,24 @@ csvpath = os.path.join('Resources', 'election_data.csv')
 # open CSV file
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
-    print(csv_reader)
+    
 # read and store the csv header
     csv_header = next(csvfile)
+
+# The total number of votes cast
+    votes = []
+    candidates = []
+
+    for v in csv_reader:
+        votes.append(v[0])
+ # A complete list of candidates who received votes
+
+ 
+total_votes = len(votes)
+
+print(total_votes)
+print(candidates)
+
 
 
 # PyPoll Instructions
@@ -18,7 +33,7 @@ with open(csvpath) as csvfile:
 
 # three columns: "Voter ID", "County", and "Candidate"
 
-# The total number of votes cast
+
 
 # A complete list of candidates who received votes
 
