@@ -64,3 +64,5 @@ print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
 # export to text file
+
+export_path = os.path.join('Output', 'budget_data_analysis.txt')
