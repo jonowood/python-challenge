@@ -8,8 +8,7 @@ csvpath = os.path.join('Resources', 'budget_data.csv')
 # open CSV file
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
-    
-    # print(csv_reader)
+
 
 # read and store the csv header
     csv_header = next(csvfile)
