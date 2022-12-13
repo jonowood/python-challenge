@@ -5,16 +5,14 @@ import csv
 # set path for budget_data.csv
 csvpath = os.path.join('Resources', 'budget_data.csv')
 
+# open CSV file
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     
     print(csv_reader)
 
-# Read and store the csv header
+# read and store the csv header
     csv_header = next(csvfile)
-
-
-
 
 # Set lists to store results
 
@@ -29,6 +27,7 @@ with open(csvpath) as csvfile:
         months.append(x[0])
         profits.append(int(x[1]))
 
+# Find total months, and sum of profits/loss'
         month_total = len(months)
         total_profits = sum(profits)
 
@@ -36,13 +35,25 @@ with open(csvpath) as csvfile:
 print(month_total)
 print(total_profits)
 
-
-
 # * The changes in "Profit/Losses" over the entire period, and then the average of those changes
+changes = []
+
+for i in range(1, len(profits)):
+    changes.append(profits[i] - profits[i-1])
+    
+average_changes = sum(changes) / (month_total-1)
+
+print(average_changes)
 
 # * The greatest increase in profits (date and amount) over the entire period
+greatest_increase = max(changes)
+
 
 # * The greatest decrease in profits (date and amount) over the entire period
+greatest_decrease = min(changes)
+
+print(greatest_decrease)
+print(greatest_increase)
 
 # Your analysis should look similar to the following:
 
