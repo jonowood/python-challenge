@@ -9,7 +9,7 @@ csvpath = os.path.join('Resources', 'budget_data.csv')
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
     
-    print(csv_reader)
+    # print(csv_reader)
 
 # read and store the csv header
     csv_header = next(csvfile)
@@ -22,14 +22,13 @@ with open(csvpath) as csvfile:
     profits = []
 
 # Loop to add data to lists
-
     for x in csv_reader:
         months.append(x[0])
         profits.append(int(x[1]))
 
 # Find total months, and sum of profits/loss'
-        month_total = len(months)
-        total_profits = sum(profits)
+    month_total = len(months)
+    total_profits = sum(profits)
 
 
 # * The changes in "Profit/Losses" over the entire period, and then the average of those changes
@@ -50,8 +49,6 @@ month_increase = months[changes.index(greatest_increase)+1]
 greatest_decrease = min(changes)
 month_decrease = months[changes.index(greatest_decrease)+1]
 
-# Your analysis should look similar to the following:
-
 # Print Output
 print("Financial Analysis")
 print("----------------------------")
@@ -61,14 +58,10 @@ print(f"Average Change: ${rounded_average}")
 print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 
-# In addition, your final script should both print the analysis to the terminal and export a text file with the results.
-
-# export to text file
-
+# Set export path for output txt file
 export_path = os.path.join('Output', 'budget_data_analysis.txt')
 
-# Open the file using Write mode. Specify the variable to hold the contents
-
+# Open the file using Write mode. Print output to file
 with open(export_path, 'w', encoding='utf-8') as txt:
     txt.write("Financial Analysis")
     txt.write('\n')
