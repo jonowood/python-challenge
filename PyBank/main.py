@@ -5,14 +5,8 @@ import csv
 # set path for budget_data.csv
 csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
 
-
-
-
-print("HELLO")
-
-# In this challenge, you are tasked with creating a Python script to analyse the financial records of your company. You will give a set of financial data called [budget_data.csv](PyBank/Resources/budget_data.csv). The dataset is composed of two columns: "Date" and "Profit/Losses". (Thankfully, your company has rather lax standards for accounting, so the records are simple.)
-
-# Your task is to create a Python script that analyses the records to calculate each of the following:
+with open(csvpath) as csvfile:
+    csv_reader = csv.reader(csvfile, delimiter=",")
 
 # * The total number of months included in the dataset
 
