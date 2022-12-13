@@ -32,10 +32,6 @@ with open(csvpath) as csvfile:
         total_profits = sum(profits)
 
 
-
-print(month_total)
-print(total_profits)
-
 # * The changes in "Profit/Losses" over the entire period, and then the average of those changes
 changes = []
 
@@ -45,17 +41,16 @@ for i in range(1, len(profits)):
 average_changes = sum(changes) / (month_total-1)
 rounded_average = round(average_changes, 2)
 
-print(rounded_average)
-
 # * The greatest increase in profits (date and amount) over the entire period
 greatest_increase = max(changes)
+
+month_increase = months[changes.index(greatest_increase)+1]
 
 
 # * The greatest decrease in profits (date and amount) over the entire period
 greatest_decrease = min(changes)
 
-print(greatest_decrease)
-print(greatest_increase)
+month_decrease = months[changes.index(greatest_decrease)+1]
 
 # Your analysis should look similar to the following:
 
@@ -65,8 +60,8 @@ print("----------------------------")
 print(f"Total Months: {month_total}")
 print(f"Total: ${total_profits}")
 print(f"Average Change: ${rounded_average}")
-#   Greatest Increase in Profits: Aug-16 ($1862002)
-#   Greatest Decrease in Profits: Feb-14 ($-1825558)
+print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
+print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 #   ```
 
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
