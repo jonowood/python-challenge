@@ -43,18 +43,16 @@ rounded_average = round(average_changes, 2)
 
 # * The greatest increase in profits (date and amount) over the entire period
 greatest_increase = max(changes)
-
 month_increase = months[changes.index(greatest_increase)+1]
 
 
 # * The greatest decrease in profits (date and amount) over the entire period
 greatest_decrease = min(changes)
-
 month_decrease = months[changes.index(greatest_decrease)+1]
 
 # Your analysis should look similar to the following:
 
-#   ```text
+# Print Output
 print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {month_total}")
@@ -62,6 +60,7 @@ print(f"Total: ${total_profits}")
 print(f"Average Change: ${rounded_average}")
 print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
-#   ```
 
 # In addition, your final script should both print the analysis to the terminal and export a text file with the results.
+
+# export to text file
