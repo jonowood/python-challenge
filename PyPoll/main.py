@@ -17,15 +17,26 @@ with open(csvpath) as csvfile:
     candidates = []
     candidate_count = {}
     candidate_votes = 0
+    unique_candidates = list(set(candidates))
 
     for v in csv_reader:
         votes.append(v[0])
-        candidates.append(v[2])
+        # candidates.append(v[2])
+        if v[2] not in candidates:
+            candidates.append(v[2])
+            candidate_votes = 1
+        else:
+            candidate_votes = candidate_votes + 1
 
- # A complete list of candidates who received votes
-unique_candidates = list(set(candidates))
 
-# up to here ##################################   for c in candidates:
+
+
+
+# A complete list of candidates who received votes
+
+
+
+# up to here ##################################  
 
 
 
@@ -35,7 +46,7 @@ total_votes = len(votes)
 
 
 print(total_votes)
-print(unique_candidates)
+print(candidate_votes)
 
 # The percentage of votes each candidate won
 
