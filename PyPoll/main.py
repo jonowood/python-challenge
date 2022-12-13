@@ -12,23 +12,32 @@ with open(csvpath) as csvfile:
 # read and store the csv header
     csv_header = next(csvfile)
 
-# The total number of votes cast
+# create lists to store data, loop to capture
     votes = []
     candidates = []
+    candidate_count = {}
+    candidate_votes = 0
 
     for v in csv_reader:
         votes.append(v[0])
         candidates.append(v[2])
 
  # A complete list of candidates who received votes
+unique_candidates = list(set(candidates))
+
+# up to here ##################################   for c in candidates:
+
+
 
  
+# The total number of votes cast
 total_votes = len(votes)
-unique_candidates = set(candidates)
+
 
 print(total_votes)
 print(unique_candidates)
 
+# The percentage of votes each candidate won
 
 
 # PyPoll Instructions
@@ -38,9 +47,9 @@ print(unique_candidates)
 
 
 
-# A complete list of candidates who received votes
 
-# The percentage of votes each candidate won
+
+
 
 # The total number of votes each candidate won
 
