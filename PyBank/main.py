@@ -58,10 +58,10 @@ print(greatest_increase)
 # Your analysis should look similar to the following:
 
 #   ```text
-#   Financial Analysis
-#   ----------------------------
-#   Total Months: 86
-#   Total: $22564198
+print("Financial Analysis")
+print("----------------------------")
+print(f"Total Months: {month_total}")
+print(f"Total: ${total_profits}")
 #   Average Change: $-8311.11
 #   Greatest Increase in Profits: Aug-16 ($1862002)
 #   Greatest Decrease in Profits: Feb-14 ($-1825558)
