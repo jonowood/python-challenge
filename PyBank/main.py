@@ -32,6 +32,7 @@ with open(csvpath) as csvfile:
         total_profits = sum(profits)
 
 
+
 print(month_total)
 print(total_profits)
 
@@ -42,8 +43,9 @@ for i in range(1, len(profits)):
     changes.append(profits[i] - profits[i-1])
     
 average_changes = sum(changes) / (month_total-1)
+rounded_average = round(average_changes, 2)
 
-print(average_changes)
+print(rounded_average)
 
 # * The greatest increase in profits (date and amount) over the entire period
 greatest_increase = max(changes)
@@ -62,7 +64,7 @@ print("Financial Analysis")
 print("----------------------------")
 print(f"Total Months: {month_total}")
 print(f"Total: ${total_profits}")
-#   Average Change: $-8311.11
+print(f"Average Change: ${rounded_average}")
 #   Greatest Increase in Profits: Aug-16 ($1862002)
 #   Greatest Decrease in Profits: Feb-14 ($-1825558)
 #   ```
