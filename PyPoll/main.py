@@ -18,13 +18,16 @@ with open(csvpath) as csvfile:
 
     for v in csv_reader:
         votes.append(v[0])
+        candidates.append(v[2])
+
  # A complete list of candidates who received votes
 
  
 total_votes = len(votes)
+unique_candidates = set(candidates)
 
 print(total_votes)
-print(candidates)
+print(unique_candidates)
 
 
 
