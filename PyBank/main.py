@@ -13,23 +13,30 @@ with open(csvpath) as csvfile:
 # Read and store the csv header
     csv_header = next(csvfile)
 
+
+
+
+# Set lists to store results
+
 # * The total number of months included in the dataset
-
-# Set list to store results
     months = []
+# * The net total amount of "Profit/Losses" over the entire period
+    profits = []
 
-# Loop to add dates to list
+# Loop to add data to lists
 
-    for date in csv_reader:
-        months.append(date[0])
+    for x in csv_reader:
+        months.append(x[0])
+        profits.append(int(x[1]))
 
         month_total = len(months)
+        total_profits = sum(profits)
 
 
 print(month_total)
+print(total_profits)
 
 
-# * The net total amount of "Profit/Losses" over the entire period
 
 # * The changes in "Profit/Losses" over the entire period, and then the average of those changes
 
