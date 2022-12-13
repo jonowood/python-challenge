@@ -7,8 +7,20 @@ csvpath = os.path.join('..', 'Resources', 'budget_data.csv')
 
 with open(csvpath) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
+    
+    print(csv_reader)
+
+# Read and store the csv header
+    csv_header = next(csvfile)
 
 # * The total number of months included in the dataset
+# Set list to store results
+    months = []
+    for x in csv_reader:
+        months.append(row[0])
+
+
+
 
 # * The net total amount of "Profit/Losses" over the entire period
 
