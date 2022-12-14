@@ -29,18 +29,20 @@ print(total_votes)
 print(unique_candidates)
 print(candidate_count)
 
-winner = max(candidate_count.values)
-print("the winner ", winner)
-
+sorted_candidate_count = sorted(candidate_count.items(), key=lambda x:x[1], reverse=True)
+sorted_candidate_dict = dict(sorted_candidate_count)
 # split dictionary into keys and values
 keys = []
 values = []
-for i in candidate_count:
+for i in sorted_candidate_dict:
     keys.append(i)
-    values.append(candidate_count[i])
+    values.append(sorted_candidate_dict[i])
 
 print("keys : ", str(keys))
 print("values : ", str(values))
+
+
+print(sorted_candidate_dict[list(sorted_candidate_dict.values())[0]])
 
 # A complete list of candidates who received votes
 
