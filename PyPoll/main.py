@@ -29,6 +29,8 @@ print(total_votes)
 print(unique_candidates)
 print(candidate_count)
 
+winner = max(candidate_count.values)
+print("the winner ", winner)
 
 # split dictionary into keys and values
 keys = []
