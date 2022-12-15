@@ -58,7 +58,7 @@ print(f"Greatest Increase in Profits: {month_increase} (${greatest_increase})")
 print(f"Greatest Decrease in Profits: {month_decrease} (${greatest_decrease})")
 
 # Set export path for output txt file
-export_path = os.path.join('Output', 'budget_data_analysis.txt')
+export_path = os.path.join('Analysis', 'budget_data_analysis.txt')
 
 # Open the file using Write mode. Print output to file
 with open(export_path, 'w', encoding='utf-8') as txt:

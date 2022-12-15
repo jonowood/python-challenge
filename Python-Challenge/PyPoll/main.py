@@ -65,7 +65,7 @@ print("Winner: ", winning_candidate, '\n')
 print("----------------------------")
 
 # Set export path for output txt file
-export_path = os.path.join('Output', 'election_analysis.txt')
+export_path = os.path.join('Analysis', 'election_analysis.txt')
 
 # # Open the file using Write mode. Print output to file
 with open(export_path, 'w', encoding='utf-8') as txt:
@@ -85,6 +85,6 @@ with open(export_path, 'w', encoding='utf-8') as txt:
     txt.write('\n')
     txt.write("----------------------------")
     txt.write('\n')
-    txt.write(f'"Winner: " {winning_candidate}')
+    txt.write(f'Winner: {winning_candidate}')
     txt.write('\n')
     txt.write("----------------------------")
