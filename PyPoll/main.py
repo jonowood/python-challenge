@@ -25,10 +25,8 @@ with open(csvpath) as csvfile:
 # tally the votes for each candidate
 candidate_count = Counter(candidates)
 
+# tally the total votes for all candidates
 total_votes = len(votes)
-# print(total_votes)
-# print(unique_candidates)
-# print(candidate_count)
 
 # sort the candidates and vote counts by winner
 sorted_candidate_count = sorted(candidate_count.items(), key=lambda x:x[1], reverse=True)
@@ -40,10 +38,6 @@ values = []
 for i in sorted_candidate_dict:
     keys.append(i)
     values.append(sorted_candidate_dict[i])
-
-# print("keys : ", str(keys))
-# print("values : ", str(values))
-
 
 # store the candidate results into variables
 winning_candidate = keys[0]
@@ -59,15 +53,15 @@ second_percent = (second_votes / total_votes) * 100
 third_percent = (third_votes / total_votes) * 100
 
 # Print Output
-print("Election Results")
-print("----------------------------")
-print(f"Total Votes {total_votes}")
-print("----------------------------")
-print(f'{winning_candidate} : {format(winning_percent,".3f")}% ({winning_votes})')
-print(f'{second_place} : {format(second_percent,".3f")}% ({second_votes})')
-print(f'{third_place} : {format(third_percent,".3f")}% ({third_votes})')
-print("----------------------------")
-print("Winner: ", winning_candidate)
+print("Election Results", '\n')
+print("----------------------------", '\n')
+print(f"Total Votes {total_votes}", '\n')
+print("----------------------------", '\n')
+print(f'{winning_candidate} : {format(winning_percent,".3f")}% ({winning_votes})', '\n')
+print(f'{second_place} : {format(second_percent,".3f")}% ({second_votes})', '\n')
+print(f'{third_place} : {format(third_percent,".3f")}% ({third_votes})', '\n')
+print("----------------------------", '\n')
+print("Winner: ", winning_candidate, '\n')
 print("----------------------------")
 
 # Set export path for output txt file
