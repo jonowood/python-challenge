@@ -31,6 +31,7 @@ print(candidate_count)
 
 sorted_candidate_count = sorted(candidate_count.items(), key=lambda x:x[1], reverse=True)
 sorted_candidate_dict = dict(sorted_candidate_count)
+
 # split dictionary into keys and values
 keys = []
 values = []
@@ -41,8 +42,12 @@ for i in sorted_candidate_dict:
 print("keys : ", str(keys))
 print("values : ", str(values))
 
-
-print(sorted_candidate_dict[list(sorted_candidate_dict.values())[0]])
+winning_candidate = keys[0]
+winning_votes = values[0]
+second_place = keys[1]
+second_votes = values[1]
+third_place = keys[2]
+third_votes = values[2]
 
 # A complete list of candidates who received votes
 
@@ -51,6 +56,9 @@ print(sorted_candidate_dict[list(sorted_candidate_dict.values())[0]])
 # PyPoll Instructions
 # In this Challenge, you are tasked with helping a small, rural U.S. town modernise its vote-counting process.
 # three columns: "Voter ID", "County", and "Candidate"
+
+print(winning_candidate)
+print(winning_votes)
 
 
 
